@@ -113,3 +113,9 @@ http://localhost:3000
 	Add scope functions to call the Meteor methods
 
 	ng-click="deleteTask(task)"
+
+11. Filtering data with publish and subscribe
+
+	meteor remove autopublish
+
+	$scope.$meteorSubscribe('tasks');
