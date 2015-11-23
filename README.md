@@ -84,3 +84,22 @@ http://localhost:3000
 
 	To make Meteor understand Angular bindings and the other way around , we use $scope.getReactively function that turns Angular scope variables into Meteor reactive variables.
 
+9. Adding user accounts
+
+	meteor add accounts-password dotansimha:accounts-ui-angular
+
+	Now let's add dependency to account.ui module in our module definition:
+
+	angular.module('simple-todos',['angular-meteor','accounts.ui']);
+
+	Add loginButtons directive
+
+	<login-buttons></login-buttons>
+
+	add an ng-show directive to only show the form when there is a logged in user, hide new task form if user is not logged in
+
+	ng-show="$root.currentUser"
+
+	Getting informations about the logged-in user
+
+	{{$root.currentUser}}
