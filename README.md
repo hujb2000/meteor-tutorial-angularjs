@@ -28,3 +28,5 @@ http://localhost:3000
 
 	So, for example, when a file is named my-angular-template.html is placed in the client folder. it will be available for ng-include or ui-router with the name client/my-angular-template.html
 
+3. We are using the $meteor service to bind out Tasks colection to our $scope.tasks variable. Now every change that will happen to each of those objects will by synced in real time across our stack.
+
