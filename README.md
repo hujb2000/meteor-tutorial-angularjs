@@ -48,3 +48,30 @@ http://localhost:3000
 
 	ng-model
 
+6.  Deploy your app
+
+	meteor deploy hujb2000.meteor.com
+
+7. Running your app on Android or iOS
+
+	Currently, Meteor on Windows does not support mobile builds, If your are using Meteor on Windows , your should skip this step.
+
+	* Setting up Angular for mobile
+
+	Angular needs the main document to be ready so it can bootstrap, but different devices have different events for ready.  To solve this ,we need to change the way we bootstrap our Angular App
+
+	Remove the current bootstrap by removing ng-app from the <body> tag
+
+	meteor add-platform ios
+
+	meteor run ios --port 3001
+
+	meteor add-platform android
+
+	meteor run android
+
+	meteor run ios-device
+
+	meteor run android-device
+
+
