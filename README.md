@@ -30,3 +30,10 @@ http://localhost:3000
 
 3. We are using the $meteor service to bind out Tasks colection to our $scope.tasks variable. Now every change that will happen to each of those objects will by synced in real time across our stack.
 
+4. Adding  tasks with a form
+
+	ng-submit
+
+	ng-model
+
+	$scope.addTask
