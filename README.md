@@ -74,4 +74,13 @@ http://localhost:3000
 
 	meteor run android-device
 
+8. Filtering collections
+
+	#scope.$watch('hideCompleted',function(){
+		$scope.query = {checked: {$ne:true}};
+	});
+
+	* Connecting Angular bindings to Meteor's reactivity
+
+	To make Meteor understand Angular bindings and the other way around , we use $scope.getReactively function that turns Angular scope variables into Meteor reactive variables.
 

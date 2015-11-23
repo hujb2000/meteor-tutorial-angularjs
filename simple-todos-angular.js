@@ -18,7 +18,7 @@ if (Meteor.isClient) {
   angular.module('simple-todos').controller('TodosListCtrl',['$scope','$meteor',
       function($scope,$meteor){
         $scope.tasks = $meteor.collection(function(){
-          return Tasks.find({},{sort:{createAt:-1}});
+          return Tasks.find( $scope.getReactively('query'),{sort:{createAt:-1}});
         });
 
         $scope.addTask = function(newTask){
@@ -28,8 +28,23 @@ if (Meteor.isClient) {
           });
         }
 
+
+        $scope.$watch('hideCompleted',function(){
+          if($scope.hideCompleted){
+            $scope.query = {checked:{$ne:true}};
+          }else{
+            $scope.query = {};
+          }
+        })
+
+        $scope.incompleteCount = function() {
+          return Tasks.find({checked:{$ne:true}}).count();
+        }
+
       }
   ]);
+
+
 }
 
 if (Meteor.isServer) {
