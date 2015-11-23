@@ -103,3 +103,13 @@ http://localhost:3000
 	Getting informations about the logged-in user
 
 	{{$root.currentUser}}
+
+10. Security with methods
+
+	meteor remove insecure
+
+	Add Meteor Methods for add, delete and check tasks
+
+	Add scope functions to call the Meteor methods
+
+	ng-click="deleteTask(task)"
