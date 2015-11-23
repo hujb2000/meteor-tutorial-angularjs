@@ -37,3 +37,14 @@ http://localhost:3000
 	ng-model
 
 	$scope.addTask
+
+5. chekcing off and deleting tasks
+
+	ng-repeat
+
+	ng-class
+
+	ng-click="tasks.remove(task)"
+
+	ng-model
+
